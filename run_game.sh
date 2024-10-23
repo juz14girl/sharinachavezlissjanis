@@ -2,4 +2,4 @@
 
 NAME="Sharina_Chavez_Lissjanis"
 
-echo "{$NAME}'s program"
+echo "$NAME's program"
