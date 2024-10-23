@@ -35,6 +35,7 @@ public class Guesser {
      */
     public void start() {
         // call the rules method here
+        rules();
         // call the doGuesses() method here
     }
 
