@@ -66,6 +66,11 @@ public class Guesser {
         System.out.println("Please enter 'T' for true and 'F' for false");
         String reply = System.console().readLine();
 
+        while (!reply.equalsIgnoreCase("T") && !reply.equalsIgnoreCase("F")) {
+            System.out.println("Invalid input. Type only 'T' or 'F'.");
+            reply = System.console().readLine();
+        }
+
         return reply;
     }
 
