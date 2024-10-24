@@ -12,3 +12,6 @@ cd "${NAME}_labb/"
 
 echo -n "Running from " 
  pwd
+
+echo "compiling..."
+javac GuesserGame.java
