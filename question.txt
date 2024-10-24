@@ -1,0 +1,7 @@
+Vad är pull repektive push?
+- git pull : pull is done from remote repository like GitHub to local repository. For example if you work on a project as a team you have to pull others people work or your teamate work down to your computer, it is to make sure that you are up to date to the changes made in the project. 
+- git push : On the other hand, push is like when you made changes on the project you and your team is working on and you have to push it to remote repository like GitHub, Gitlab etc. to share to your teamate so that they will be aware and updated as well on the changes you made.
+När använder man log respektive status?
+Vad är en Git branch och varför är de viktiga?
+Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd. Förklara skillnaden och motivera när man skulle använda den ena eller andra metoden. Ge exempel på de kommandon du använder för att göra detta och vissa att det fungerar, vilken output du fick från git-kommandona.
+Tips: Gör exemplen med att backa i en branch så att master fortfarande är korrekt. 
