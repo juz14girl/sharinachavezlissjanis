@@ -1,7 +1,13 @@
 Vad är pull repektive push?
 - git pull : pull is done from remote repository like GitHub to local repository. For example if you work on a project as a team you have to pull others people work or your teamate work down to your computer, it is to make sure that you are up to date to the changes made in the project. 
 - git push : On the other hand, push is like when you made changes on the project you and your team is working on and you have to push it to remote repository like GitHub, Gitlab etc. to share to your teamate so that they will be aware and updated as well on the changes you made.
+
 När använder man log respektive status?
+- git log is used when you want to see for example the latest commit or changes made on the project you or your team is working on, also if you have another branch than main or master branch git log will also show which branch does the latest commit or changes is made as well as the author who made the commit/changes as well as the time. If it's your teamate or one of the collaborator on the project who made the changes, you can also see who made the latest commit as well as the other commit or changes in the project together with the SHA or secure hash algorithm that you can use if for example you have a client and you showed them the result and they are not happy about it and you make changes according to what they want, and if for some example afer you comply on their request, they again tell you that the last one you showed them is better, then you can use that SHA to easily recover that part before all the new changes is done.
+- git status is used to checked if there are files untracked or modified. Which files are staged for commit as well as which branch you are on.
+
 Vad är en Git branch och varför är de viktiga?
+- git branch is like a separate copy of the part or line of tasks you're developing or working, it is very helpful so that you and your team can share different tasks and work on the project in parallel. Additionally git branch will allow you to freely experiment on the tasks you are assigned with without affecting the default branch main or master. It keeps the work clean and organized as it allows you to merge the changes to the main branch whenever you are sure on your line or tasks you are working with.
+
 Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd. Förklara skillnaden och motivera när man skulle använda den ena eller andra metoden. Ge exempel på de kommandon du använder för att göra detta och vissa att det fungerar, vilken output du fick från git-kommandona.
 Tips: Gör exemplen med att backa i en branch så att master fortfarande är korrekt. 
