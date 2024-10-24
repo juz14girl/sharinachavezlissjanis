@@ -10,5 +10,5 @@ cp *.java "${NAME}_labb/"
 
 cd "${NAME}_labb/"
 
-echo "Current directory"
-pwd
+echo -n "Running from " 
+ pwd
