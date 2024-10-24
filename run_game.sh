@@ -15,3 +15,6 @@ echo -n "Running from "
 
 echo "compiling..."
 javac GuessingGame.java
+
+echo "running..."
+java GuessingGame
