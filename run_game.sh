@@ -10,8 +10,9 @@ cp *.java "${NAME}_labb/"
 
 cd "${NAME}_labb/"
 
-echo -n "Running from " 
- pwd
+
+echo -n "Running game from " 
+pwd
 
 echo "compiling..."
 javac GuessingGame.java
