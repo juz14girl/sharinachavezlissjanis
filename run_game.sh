@@ -14,4 +14,4 @@ echo -n "Running from "
  pwd
 
 echo "compiling..."
-javac GuesserGame.java
+javac GuessingGame.java
