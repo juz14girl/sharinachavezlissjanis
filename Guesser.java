@@ -65,6 +65,8 @@ public class Guesser {
         // When you have gotten a valid reply, return it.
         System.out.print("Enter your name: ");
         String name = System.console().readLine();
+
+        System.out.printf("Hi %s, today we're going to have a guessing game", name);
         
         System.out.println("Please enter 'T' for true and 'F' for false");
         String reply = System.console().readLine();
