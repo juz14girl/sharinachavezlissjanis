@@ -1,13 +1,109 @@
-Vad är pull repektive push?
-- git pull : pull is done from remote repository like GitHub to local repository. For example if you work on a project as a team you have to pull others people work or your teamate work down to your computer, it is to make sure that you are up to date to the changes made in the project. 
-- git push : On the other hand, push is like when you made changes on the project you and your team is working on and you have to push it to remote repository like GitHub, Gitlab etc. to share to your teamate so that they will be aware and updated as well on the changes you made.
+                                         
 
-När använder man log respektive status?
-- git log is used when you want to see for example the latest commit or changes made on the project you or your team is working on, also if you have another branch than main or master branch git log will also show which branch does the latest commit or changes is made as well as the author who made the commit/changes as well as the time. If it's your teamate or one of the collaborator on the project who made the changes, you can also see who made the latest commit as well as the other commit or changes in the project together with the SHA or secure hash algorithm that you can use if for example you have a client and you showed them the result and they are not happy about it and you make changes according to what they want, and if for some example afer you comply on their request, they again tell you that the last one you showed them is better, then you can use that SHA to easily recover that part before all the new changes is done.
-- git status is used to checked if there are files untracked or modified. Which files are staged for commit as well as which branch you are on.
+ 							___***Jag siktar för VG***___
 
-Vad är en Git branch och varför är de viktiga?
-- git branch is like a separate copy of the part or line of tasks you're developing or working, it is very helpful so that you and your team can share different tasks and work on the project in parallel. Additionally git branch will allow you to freely experiment on the tasks you are assigned with without affecting the default branch main or master. It keeps the work clean and organized as it allows you to merge the changes to the main branch whenever you are sure on your line or tasks you are working with.
+Vad är pull repektive push? 
 
-Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd. Förklara skillnaden och motivera när man skulle använda den ena eller andra metoden. Ge exempel på de kommandon du använder för att göra detta och vissa att det fungerar, vilken output du fick från git-kommandona.
-Tips: Gör exemplen med att backa i en branch så att master fortfarande är korrekt. 
+- git pull : pull is done from remote repository like GitHub to local repository. For example if you work on a project as a team 
+you have to pull others people work or your teamate work down to your computer, it is to make sure that you are up to date to the 
+changes made in the project. 
+
+- git push : On the other hand, push is like when you made changes on the project you and your team is working on and you have to 
+push it to remote repository like GitHub, Gitlab etc. to share to your teamate so that they will be aware and updated as well on 
+the changes you made.
+
+
+När använder man log respektive status? 
+
+- git log is used when you want to see the latest commits or changes made in the project you or your team is working on. If you 
+have another branch besides the main or master branch, git log will also show which branch the latest commit or changes were made 
+on, as well as the author who made them and the time of the commit. If it's your teammate or one of the collaborators on the 
+project who made the changes, you can also see who made the latest commit along with other commits or changes in the project, along 
+with the SHA (secure hash algorithm). This is useful if you have a client and you showed them the results, but they are not happy 
+with it. If you make changes according to their requests, and then they tell you that the last version you showed them was better, 
+you can use that SHA to easily recover that part before all the new changes were made. 
+
+- git status is used to checked if there are 
+files untracked or modified. Git status will show which files are staged for commit as well as which branch you are on.
+
+
+Vad är en Git branch och varför är de viktiga? 
+
+- git branch is like a separate copy of the part or line of tasks you're developing or working, it is very helpful so that you and 
+your team can share different tasks and work on the project in parallel. Additionally git branch will allow you to freely 
+experiment on the tasks you are assigned with without affecting the default branch main or master. It keeps the work clean and 
+organized as it allows you to merge the changes to the main branch whenever you are sure on your line or tasks you are working 
+with.
+
+
+Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd. Förklara skillnaden och motivera när man skulle använda 
+den ena eller andra metoden. Ge exempel på de kommandon du använder för att göra detta och vissa att det fungerar, vilken output du 
+fick från git-kommandona. Tips: Gör exemplen med att backa i en branch så att master fortfarande är korrekt. 
+
+- git checkout is one of the git command you can use to go back to its previous states, if you only want to check how does the 
+previous state of the file you were working with, you can use git checkout <hash/SHA> command, it will show you a detached HEAD 
+state from the branch you were working on allowing you to explore the state of the project with that commit. git checkout -b 
+experiment-branch: by running this command it will create a separate branch allowing you to freely experiment to it without 
+affecting the main codebase. Before creating a new branch I checked my main branch which file is it I wanted to create and used 
+checkoutI my checkout-experimental branch, it shows that it stopped in commit where I added answer in the question.txt file, in 
+that remote repository I used git checkout -b checkout-experimental and stopped to show the history of what I did using git 
+checkout command.
+
+
+- git revert is one of the command you can use to go back to the state previous of the tasks you are working with. It will not delete any commit 
+that you previously did, rather it will add another commit on top of the other commits. As an example in the Guesser java file that I edited, I 
+removed the print statement of asking a player name as well as greeting the player in the get reply method. After commiting of the changes I made on 
+the file I used the command 'git revert HEAD' and it shows me the previous state of the Guesser java file I am working with before I removed the 
+said print statement. which is shows in branch named 'experimental' history.
+
+
+- git reset is another git command that you can use to go back to the state previous of the tasks you are working with. Git reset 
+is used to undo changes in your repository. There are three main forms of git reset, --soft, --mixed and --hard. 
+
+- git reset --soft HEAD~3 for example will moves the HEAD pointer back by three commits. In my experimental branch, I used git 
+reset --soft HEAD~3 to return to the state of my Guesser Java file before I added the greeting print statement, effectively undoing 
+the previous commit.
+
+- git reset --mixed. After I used git reset --soft HEAD~3, I pushed those changes to my remote repository. Then, to demonstrate the 
+reset in my project history, I created a new branch called git-reset-mixed-experimental-branch from that state. However, when I ran 
+git reset --mixed, it unstaged my changes while keeping them in the working directory, which means I still have all my 
+modifications available but need to stage them again to commit. This illustrates how git reset --mixed can help me manage changes 
+while maintaining a clear history for demonstration.
+
+- git reset --hard. I used the command git reset --hard HEAD~23 to go back 23 commits in my project. This left me with just the 
+last 3 commits, returning the Guesser.java file to the state where it only had the constructor, as described in the comments in the 
+file. I did this to show the effect of a hard reset and demonstrate how it completely removes recent changes to restore an 
+earlier version. This experiment came after using git reset --mixed, from which I created a new branch called 
+git-reset-hard-experimental-demo to explore how different types of resets impact my project.
+
+
+Skriv i frågor.txt att du siktar på VG.
+Skicka innan deadline.
+Förutom kraven för G, svara i frågor.txt även på följande fråga:
+
+
+Beskriv och jämför hur man kan använda git rebase och git merge i ett scenario där flera utvecklare jobbar på olika feature 
+branches. Diskutera fördelarna och nackdelarna med båda teknikerna, samt hur de påverkar historiken. Uppgift: Skapa ett repo med 
+två eller fler feature branches som utvecklare arbetar på. Beskriv hur du löser konflikter som uppstår under rebase och merge och 
+visa slutresultatet i historiken. Exempel: Använd kommandon som git rebase, git merge för att illustrera skillnaderna. Motivering: 
+Förklara varför rebase ibland används i stället för merge för att hålla en renare historik och när merge är att föredra för att 
+bibehålla kontext mellan commits.
+
+- I created another two different remote repositories in Github to demonstrate how I used git merge and git rebase. In this project, I managed a main branch alongside several feature branches, such as feature/constructor and feature/start-method for my git-merge demo. In my git-merge repository, When I used 
+git merge, I could see in the history that Developer 1 and Developer 2 were working on different features simultaneously. The merge 
+created a new commit that combined all their changes, preserving the full history and making it clear who contributed what. For 
+instance, I could see that Developer 2 added a constructor in Guesser.java, while Developer 1 implemented the start method.
+
+- I also experimented with rebasing in some branches that shows in rebase-demo repository,in that such as feature/getReply. When I 
+used git rebase, it streamlined the commit history into a straight line, which made it appear cleaner by avoiding additional merge 
+commits. However, I found that I needed to be more cautious with conflicts during the rebase process, especially while working on 
+the constructor implementation.
+
+When conflicts arose, like in the feature/constructor branch, I addressed them by fixing the conflicts in the files, adding the 
+resolved files with git add, and then continuing the rebase using git rebase --continue.
+
+Personally, I prefer using git merge when collaborating with other developers because it feels safer, retains the entire history, 
+and makes it easier to track who did what and when. If any issues occur, they are also generally easier to resolve with a merge 
+history. However, I opt for git rebase when I'm working alone on a feature, aiming for a cleaner history, or when I need to update 
+my feature branch with the latest changes from the main branch. The git history screenshots illustrate this well, showing areas 
+where we used merges, creating branch splits, and others where we used rebase, maintaining a linear history.
