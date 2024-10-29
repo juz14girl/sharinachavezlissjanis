@@ -63,6 +63,7 @@ public class Guesser {
         // As long as it is not a valid reply (one of "T" and "F")
         // write an error message, and read a new reply.
         // When you have gotten a valid reply, return it.
+        
         System.out.println("Please enter 'T' for true and 'F' for false");
         String reply = System.console().readLine();
 
