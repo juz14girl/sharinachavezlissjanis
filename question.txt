@@ -95,9 +95,20 @@ repository, When I used git merge, I could see in the history that Developer 1 a
 The merge created a new commit that combined all their changes, preserving the full history and making it clear who contributed what. For instance, 
 I could see that Developer 2 added a constructor in Guesser.java, while Developer 1 implemented the start method.
 
-- I also experimented with rebasing in some branches that shows in rebase-demo repository. When I used git rebase, it streamlined the commit history into a straight line, which made it appear cleaner by avoiding additional merge commits. However, I found that I needed to be more cautious with conflicts during the rebase process, especially while working on the constructor implementation.
+- I also experimented with rebasing in some branches that shows in rebase-demo repository. When I used git rebase,
+it streamlined the commit history into a straight line, which made it appear cleaner by avoiding additional merge commits.
+However, I found that I needed to be more cautious with conflicts during the rebase process, especially while working on the constructor implementation.
 
-Conflicts arose in git rebase, and it was an error when i tried to push the main branch in remote repository, and since main branch is behind, i get an error stating that it my push is failed and it was rejected because my tip of my current branch is behind so i tried to i run the command git rebase origin/main, and when it was successfully updated, I tried to push again in the remote repository and it works. Another confict that arose is when I tried to pull from remote, I got the error stating that I have a divergent branch and I need to specify on how to reconcile them. Among the hint that git offers to resolve the issue is to run 'git config pull.rebase false' which means that it is a merge default strategy. Another command that git offer is 'git config pull.rebase true' on which i chose since it is a rebase demo. After I run the command it successfully rebased and update the main local branch. One more conflicts that I encounter is the conflict on which we have to chose about the incoming changes and current changes, on which we already tackle in our lessons, that is I easily resolve it by manually removing lines and arrows until the current code I wanted to commit. I then add and commit to it such as resolve conflict and then run the command 'git rebase --continue'
+Conflicts arose in git rebase, and it was an error when i tried to push the main branch in remote repository, and since main branch is behind, 
+i get an error stating that it my push is failed and it was rejected because my tip of my current branch is behind so i tried to i run the command git rebase origin/main,
+and when it was successfully updated, I tried to push again in the remote repository and it works.
+Another confict that arose is when I tried to pull from remote, I got the error stating that I have a divergent branch and I need to specify on how to reconcile them.
+Among the hint that git offers to resolve the issue is to run 'git config pull.rebase false' which means that it is a merge default strategy.
+Another command that git offer is 'git config pull.rebase true' on which i chose since it is a rebase demo.
+After I run the command it successfully rebased and update the main local branch.
+One more conflicts that I encounter is the conflict on which we have to chose about the incoming changes and current changes,
+on which we already tackle in our lessons, that is I easily resolve it by manually removing lines and arrows until the current code I wanted to commit.
+I then add and commit to it such as resolve conflict and then run the command 'git rebase --continue'
 
 Personally, I prefer using git merge when collaborating with other developers because it feels safer, retains the entire history, 
 and makes it easier to track who did what and when. If any issues occur, they are also generally easier to resolve with a merge 
